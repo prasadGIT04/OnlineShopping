@@ -13,7 +13,9 @@ const Error = () => {
     </main>)
   }
   return (
-    <div>Error</div>
+    <main className='grid main-h-[100vh] place-items-center px-8'>
+      <h4 className='text-center font-bold'>There was an error...</h4>
+    </main>
   )
 }
 
