@@ -1,9 +1,9 @@
 import React from 'react'
 import { customFetch } from '../utils'
-import ProductsList from '../components/ProductsList'
+import { Filter, ProductsContainer } from '../components'
 
 const url = "/products"
-export const loader = async(request)=>{
+export const loader = async({request})=>{
   const response = await customFetch(url)
   const products = response.data.data;
   // to use the pagination we need meta data
@@ -13,7 +13,10 @@ export const loader = async(request)=>{
 const Products = () => {
   return (
     <div>
-      <ProductsList/>
+      {/* <ProductsList/>
+      <ProductsGrid/> */}
+      <Filter />
+      <ProductsContainer/>
     </div>
   )
 }
